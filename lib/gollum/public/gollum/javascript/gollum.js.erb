@@ -450,10 +450,13 @@ $(document).ready(function() {
     });
   }
 
-  function togglePreviewTab ( preview ) {
-    if (preview) {
+  function toggleTab ( tabId ) {
+    if (tabId == 'preview') {
       active_div = '#preview-content'
       active_tab = '#preview.tabnav-tab';
+    } else if (tabId == 'wysiwyg') {
+      active_div = '#wysiwyg-content'
+      active_tab = '#wysiwyg.tabnav-tab';
     } else {
       active_div = '#edit-content'
       active_tab = '#edit.tabnav-tab';
@@ -473,17 +476,17 @@ $(document).ready(function() {
     $(".tabnav-tab").click( function(e) {
       e.preventDefault();
       if( !$(this).hasClass('selected') ) {
-        preview = $(this).attr('id') == 'preview';
-        if (preview) {
+        id = $(this).attr('id')
+        if (id == 'preview') {
           getPreview();
         }
-        togglePreviewTab(preview);
+        toggleTab(id);
       };
     });
   };
 
   var previewHotkey = function () {
-    $('.tabnav-tab').not('.selected').click();
+    $('.tabnav-tab#preview').not('.selected').click();
     return false;
   };
 
