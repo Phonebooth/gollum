@@ -7,18 +7,21 @@
         "mousetrap": "^1.6.5",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
+        "remark-parse": "^10.0.1",
+        "remark-slate": "^1.8.6",
         "slate": "^0.90.0",
         "slate-history": "^0.86.0",
         "slate-hyperscript": "^0.77.0",
         "slate-react": "^0.91.0",
-        "styled-components": "^5.3.6"
+        "styled-components": "^5.3.6",
+        "unified": "^10.1.2"
     },
     "engines": {
         "node": ">=16.15.0"
     },
     "scripts": {
         "build-react": "browserify lib/gollum/public/gollum/react/wysiwyg.js -p esmify -o lib/gollum/public/gollum/javascript/editor/wysiwyg.min.js",
-        "build": "yarn run build-react && git rm -rf lib/gollum/public/assets && bundle exec rake precompile && git add lib/gollum/public/assets"
+        "build": "git rm -rf lib/gollum/public/assets && bundle exec rake precompile && git add lib/gollum/public/assets"
     },
     "devDependencies": {
         "babel-cli": "6",
