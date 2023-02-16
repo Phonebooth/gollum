@@ -169,16 +169,12 @@ For convenience, Gollum also allows developers to set a custom location for `nod
 ## Updating static assets
 
 This is necessary whenever changes have been made to the assets in
-`lib/gollum/public/gollum/javascript` (mostly SASS, CSS, and JS files), to
+`lib/gollum/public/gollum/javascript` (mostly SASS, CSS, and JS files)
+or `lib/gollum/public/gollum/react` (the code for the WYSIWYG editor) to
 ensure the changes are also present in the [released](#releasing-the-gem)
 version of the gem.
 
-Steps:
-
-1. `git rm -r lib/gollum/public/assets`
-1. `bundle exec rake precompile`
-1. `git add lib/gollum/public/assets`
-1. `git commit`
+To do this, run `yarn run build`.
 
 ## Releasing the gem
 

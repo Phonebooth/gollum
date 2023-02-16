@@ -10,3 +10,4 @@ node_modules
 !.sprockets*
 !lib/gollum/public/gollum/stylesheets/_styles.css
 !.github*
+lib/gollum/public/gollum/javascript/editor/wysiwyg.min.js
