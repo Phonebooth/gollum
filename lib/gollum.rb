@@ -13,7 +13,7 @@ require 'rhino' if RUBY_PLATFORM == 'java'
 require ::File.expand_path('../gollum/uri_encode_component', __FILE__)
 
 module Gollum
-  VERSION = '5.3.0a'
+  VERSION = '5.3.0b'
   KEYBINDINGS = ['default', 'vim', 'emacs']
   
   ::I18n.available_locales = [:en]
