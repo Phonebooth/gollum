@@ -25,7 +25,7 @@ end
 
 group :development do
   unless RUBY_PLATFORM.match(/linux-musl$/)
-    gem 'sassc',  '~> 2.4'
+    gem 'sassc',  '~> 2.1.0'
     gem 'sassc-embedded', '~> 1.54'
   end
 end
